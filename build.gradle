@@ -1,17 +1,20 @@
-plugins {
+plugins { // 프로젝트에 사용할 플러그인
     id 'java'
+    id 'org.springframework.boot' version '3.0.2' // 스프링 부트 플러그인
+    id 'io.spring.dependency-management' version '1.1.0'  // 의존성 관리, 스프링의 의존성 관리 플러그임
 }
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
+sourceCompatibility = '17' //  자바 소스를 컴파일할 때 사용할 자바 버전을 입력
 
-repositories {
-    mavenCentral()
+repositories { // 의존성을 받을 저장소
+    mavenCentral() // 의존성을 받을 저장소
 }
 
-dependencies {
-    testImplementation platform('org.junit:junit-bom:5.9.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+dependencies { // 프로젝트를 개발하며 필요한 기능의 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-web' // 웹관련 기능
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' // 테스트 기능
 }
 
 test {
