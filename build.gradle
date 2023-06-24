@@ -1,3 +1,6 @@
+// 빌드를 설정하는 파일
+// 의존성이나 플러그인 설정 등과 같이 빌드에 필요한 설정을 할 때 사용
+
 plugins { // 프로젝트에 사용할 플러그인
     id 'java'
     id 'org.springframework.boot' version '3.0.2' // 스프링 부트 플러그인
