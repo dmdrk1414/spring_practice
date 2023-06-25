@@ -30,7 +30,7 @@ dependencies { // 프로젝트를 개발하며 필요한 기능의 의존성
 
     // 반복 메서드 작성 작업을 줄여준다. 77쪽
     compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'ort.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 }
 
 test {
