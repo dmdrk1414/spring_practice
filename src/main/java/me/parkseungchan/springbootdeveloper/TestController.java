@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-// 서비스 - 비즈니스 계층
+// 프레젠테이션 계층 - 컨트롤러
 
 // 라우터 역활을 하는 에너테이션
 // 라우터란 GTTP 요청과 메서드를 연결하는 장치를 말한다.
