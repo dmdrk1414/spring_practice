@@ -15,8 +15,8 @@ import org.springframework.web.context.WebApplicationContext;
 
 import java.awt.*;
 
-import static org.junit.jupiter.api.Assertions.*;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -68,11 +68,16 @@ class TestControllerTest {
         result
                 // andExpect() 메서드는 응답을 검증한다., 응답으로200(OK)을 반환하므로 isOk를 사용해 응답 코드가 OK(200)인지 확인
                 .andExpect(status().isOk())
-                
+
                 // 응답의 0번째 값이 DB에서 저장한 값과 같은지 확인
                 // jsonPath("$[0].${필드명}")은 JSON 응답값의 값을 가져오는 역할을 하는 메서드
                 // 0번째 배열에 들어있는 객체의 id, name값을 가져오고, 저장된 값과 같은지 확인
                 .andExpect(jsonPath("$[0].id").value(savedMember.getId()))
                 .andExpect(jsonPath("$[0].name").value(savedMember.getName()));
+
+//        assert 관련 임포트를 지워주면 assertThat 사용가능
+//        import static org.junit.Assert.*;
+//        import static org.junit.Assertion.*;
+        assertThat(3).isEqualTo(3);
     }
 }
