@@ -19,7 +19,7 @@ public class TestController {
     TestService testService; // TestService 빈 주입
 
     @GetMapping("/test") // /test GET 요청이 오면 test() 메서드 실행
-    public List<Member> getAllMembers(){
+    public List<Member> getAllMembers() {
         List<Member> members = testService.getAllMembers();
         return members;
     }

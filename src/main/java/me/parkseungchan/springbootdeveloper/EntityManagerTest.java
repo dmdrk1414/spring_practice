@@ -2,7 +2,6 @@ package me.parkseungchan.springbootdeveloper;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class EntityManagerTest {
     //    @Autowired // EntityManager 을 주입한다.
