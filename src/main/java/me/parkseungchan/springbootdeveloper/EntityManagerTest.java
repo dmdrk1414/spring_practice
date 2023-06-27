@@ -9,6 +9,8 @@ public class EntityManagerTest {
     @PersistenceContext // EntityManager 을 할당 주입
             EntityManager em;
 
+    // Spring data JPA을 사용하지 않는 코드
+    // Spring data JPA을 사용하한 코드 -> MemberService.java
     public void example() {
         // 1. 엔티티 메니저가 엔티티를 관리하니 않는 상태 (비영속 상태)
         Member member = new Member(1L, "홍길동");
